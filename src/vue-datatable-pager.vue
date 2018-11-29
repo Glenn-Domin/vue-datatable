@@ -17,7 +17,7 @@
 
 			<datatable-button v-if="page + 4 <= total_pages" disabled>...</datatable-button>
 			<datatable-button v-if="page + 3 <= total_pages" :value="total_pages" @click="setPageNum"></datatable-button>
-			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum" :prevNext="true"><span v-html="next_icon"></span></datatable-button>
+			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum" :prevNext="true">Next</datatable-button>
 		</ul>
 		<ul v-else-if="type === 'long'" :class="pagination_class">
 			<datatable-button v-for="i in total_pages" :key="i" :value="i" @click="setPageNum" :selected="i === page"></datatable-button>
