@@ -2,7 +2,7 @@
 
 <template>
 	<li :class="li_classes">
-		<a href="javascript: void(0);" :class="[a_classes, 'px-3 px-md-4']" @click="sendClick">
+		<a href="javascript: void(0);" :class="[a_classes, value === 'Prev' || value === 'Next' ? 'px-3 px-md-4' : '']" @click="sendClick">
 			<slot>{{ value }}</slot>
 		</a>
 	</li>
