@@ -3,7 +3,7 @@
 <template>
 	<nav v-if="show" class="d-flex align-items-center mb-2">
 		<ul v-if="type === 'abbreviated'" :class="pagination_class">
-			<datatable-button :disabled="page - 1 < 1" :value="page - 1" @click="setPageNum">Prev</datatable-button>
+			<datatable-button :disabled="page - 1 < 1" :value="page - 1" @click="setPageNum" class="px-3 px-md-4">Prev</datatable-button>
 			<datatable-button v-if="page - 3 >= 1" :value="1" @click="setPageNum"></datatable-button>
 			<datatable-button v-if="page - 4 >= 1" disabled>...</datatable-button>
 
@@ -17,7 +17,7 @@
 
 			<datatable-button v-if="page + 4 <= total_pages" disabled>...</datatable-button>
 			<datatable-button v-if="page + 3 <= total_pages" :value="total_pages" @click="setPageNum"></datatable-button>
-			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum">Next</datatable-button>
+			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum" class="px-3 px-md-4">Next</datatable-button>
 		</ul>
 		<ul v-else-if="type === 'long'" :class="pagination_class">
 			<datatable-button v-for="i in total_pages" :key="i" :value="i" @click="setPageNum" :selected="i === page"></datatable-button>
