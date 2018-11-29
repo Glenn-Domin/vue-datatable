@@ -1,8 +1,8 @@
 <style></style>
 
 <template>
-	<nav v-if="show">
-		<button class="btn btn btn-primary mr-2" @click="setPageNum(page--)">Prev</button>
+	<nav v-if="show" class="d-flex align-items-center mb-2">
+		<button class="btn btn btn-primary mr-2" @click="setPrevPage">Prev</button>
 		<ul v-if="type === 'abbreviated'" :class="pagination_class">
 			<datatable-button v-if="page - 3 >= 1" :value="1" @click="setPageNum"></datatable-button>
 			<datatable-button v-if="page - 4 >= 1" disabled>...</datatable-button>
@@ -26,7 +26,7 @@
 			<datatable-button :value="page" selected></datatable-button>
 			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum"><span v-html="next_icon"></span></datatable-button>
 		</ul>
-		<button class="btn btn btn-primary ml-2" @click="setPageNum(page++)">Next</button>
+		<button class="btn btn btn-primary ml-2" @click="setNextPage">Next</button>
 	</nav>
 </template>
 
@@ -112,6 +112,14 @@ export default {
 
 			this.$emit('change', number);
 		},
+    setPrevPage() {
+      if(this.page != 0)
+      this.$emit('change', this.page--)
+    },
+    setNextPage() {
+      if(this.page != this.per_page)
+      this.$emit('change', this.page++)
+    },
 		getClassForPage(number){
 			if(this.page == number){
 				return this.settings.get('pager.classes.selected');

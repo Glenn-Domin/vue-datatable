@@ -19,7 +19,7 @@ class Settings {
             },
             pager: {
                 classes: {
-                    pager: 'pagination',
+                    pager: ['pagination', 'mb-0'],
                     li: 'page-item',
                     a: 'page-link',
                     selected: 'active',
