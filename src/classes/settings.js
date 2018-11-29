@@ -4,7 +4,7 @@ class Settings {
     constructor(){
         this.properties = {
             table: {
-                class: 'table table-hover table-striped',
+                class: 'table table-hover table-striped table-bordered',
                 row: {
                     classes: ['']
                 },
