@@ -11,9 +11,9 @@ class Settings {
                 sorting: {
                     classes: {
                         canSort: ['sort'],
-                        sortNone: ['glyphicon', 'glyphicon-sort'],
-                        sortAsc: ['glyphicon', 'glyphicon-sort-by-alphabet'],
-                        sortDesc: ['glyphicon', 'glyphicon-sort-by-alphabet-alt'],
+                        sortNone: [''],
+                        sortAsc: ['sort-asc'],
+                        sortDesc: ['sort-desc'],
                     }
                 }
             },
