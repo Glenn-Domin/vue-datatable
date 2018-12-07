@@ -1,13 +1,12 @@
 <style></style>
 
 <template>
-	<th :style="{'text-align': column.align}" :class="column.headerClass">
+	<th :style="{'text-align': column.align}" :class="column.headerClass" @click="toggleSort(column.sortable)">
         <component v-if="column.headerComponent" :is="column.headerComponent" :column="column"></component>
         <span v-else>{{ column.label  }}</span>
 		<span
 			v-if="column.sortable"
 			:class="classes"
-			@click="toggleSort"
 		></span>
 	</th>
 </template>
@@ -68,13 +67,15 @@ export default {
 		joinClasses(classes){
 			return this.unique(classes).join(' ');
 		},
-		toggleSort(){
-			if(!this.direction || this.direction === null){
-				this.$emit('change', 'asc', this.column);
-			}else if(this.direction === 'asc'){
-				this.$emit('change', 'desc', this.column);
-			}else{
-				this.$emit('change', null, this.column);
+		toggleSort(sortable){
+			if(sortable) {
+				if(!this.direction || this.direction === null){
+					this.$emit('change', 'asc', this.column);
+				}else if(this.direction === 'asc'){
+					this.$emit('change', 'desc', this.column);
+				}else{
+					this.$emit('change', null, this.column);
+				}
 			}
 
 			return;
