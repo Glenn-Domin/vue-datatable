@@ -22,7 +22,7 @@
 						:key="j"
 						:column="column"
 						:row="row"
-						:selected_rows="selected_rows"
+						:selected_rows.sync="selected_rows"
 					></datatable-cell>
 			    </tr>
 			</slot>
