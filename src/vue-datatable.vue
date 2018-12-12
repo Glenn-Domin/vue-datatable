@@ -22,6 +22,7 @@
 						:key="j"
 						:column="column"
 						:row="row"
+						:selected_rows="selected_rows"
 					></datatable-cell>
 			    </tr>
 			</slot>
@@ -64,6 +65,7 @@ export default {
 		page: 1,
 		per_page: null,
 		processed_rows: [],
+		selected_rows: []
 	}),
 	computed: {
 		rows(){
