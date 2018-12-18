@@ -2,7 +2,7 @@
 
 <template>
 	<td :style="{'text-align': column.align}">
-		 <component v-if="column.component" :is="column.component" :row="row" :column="column" :selected_rows.sync="selected_rows"></component>
+		 <component v-if="column.component" :is="column.component" :row="row" :column="column"></component>
 		 <span v-else-if="column.interpolate" v-html="content"></span>
 		 <span v-else>{{ content }}</span>
 	</td>
@@ -12,8 +12,7 @@
 export default {
 	props: {
 		column: [Object, Array],
-		row: [Object, Array],
-		selected_rows: Array
+		row: [Object, Array]
 	},
 	computed: {
 		content(){
