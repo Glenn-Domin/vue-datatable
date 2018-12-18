@@ -1,12 +1,13 @@
 <style></style>
 
 <template>
-  <component :is="expand.component" :row="row"></component>
+  <component :is="column.component" :row="row"></component>
 </template>
 
 <script>
 export default {
 	props: {
+		column: [Object, Array],
 		row: [Object, Array]
   }
 }

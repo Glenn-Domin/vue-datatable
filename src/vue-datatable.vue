@@ -25,7 +25,7 @@
 						:selected_rows.sync="selected_rows"
 					></datatable-cell>
 			    </tr>
-					<datatable-expand :row="row" :key="i + 'a'" />
+					<datatable-expand :row="row" :column="normalized_columns[0]" :key="i + 'a'" />
 			</slot>
 			<tr v-if="processed_rows.length == 0">
 				<td :colspan="normalized_columns.length">
