@@ -1,4 +1,5 @@
 import VueDatatableCell from '../vue-datatable-cell.vue';
+import VueDatatableExpand from '../vue-datatable-expand.vue';
 import VueDatatableHeader from '../vue-datatable-header.vue';
 import VueDatatablePagerButton from '../vue-datatable-pager-button.vue';
 import TableType from './table-type.js';
@@ -33,6 +34,7 @@ class DatatableFactory {
         Vue.prototype.$datatables = {};
 
         Vue.component('datatable-cell', VueDatatableCell);
+        Vue.component('datatable-expand', VueDatatableExpand);
         Vue.component('datatable-header', VueDatatableHeader);
         Vue.component('datatable-button', VueDatatablePagerButton);
 
