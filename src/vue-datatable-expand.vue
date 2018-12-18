@@ -1,17 +1,13 @@
 <style></style>
 
 <template>
-  <tr v-if="expand">
-    <td colspan="100%">
-      <component :is="expand.component" :row="row"></component>
-    </td>
-  </tr>
+  <component :is="expand.component" :row="row"></component>
 </template>
 
 <script>
 export default {
 	props: {
 		row: [Object, Array]
-	}
+  }
 }
 </script>
