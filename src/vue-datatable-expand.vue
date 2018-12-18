@@ -9,6 +9,9 @@ export default {
 	props: {
 		column: [Object, Array],
 		row: [Object, Array]
+  },
+  mounted() {
+    console.log(this.column.component)
   }
 }
 </script>
