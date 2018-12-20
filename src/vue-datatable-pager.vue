@@ -5,7 +5,7 @@
 		<ul v-if="type === 'abbreviated'" :class="pagination_class">
 			<datatable-button :disabled="page - 1 < 1" :value="page - 1" @click="setPageNum" :prevNext="true">
 				<svg class="d-block d-md-none" aria-label="Previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 13" width="6" height="20"><rect width="100%" height="100%" fill="none"/><g class="currentLayer"><path fill="#231815" d="M5.7 13h-.4L.7 8.2c-.5-.5-.7-1-.7-1.8s.3-1.3.7-1.8L5.3.1c.2-.2.5-.2.7 0s.2.5 0 .7L1.4 5.4C.8 6 .8 7 1.4 7.5L6 12.1c.2.2.2.5 0 .7 0 .2-.2.2-.3.2z"/></g></svg>
-				<span class="d-none d-md-block">Prev</div>
+				<span class="d-none d-md-block">Prev</span>
 			</datatable-button>
 			<datatable-button v-if="page - 3 >= 1" :value="1" @click="setPageNum"></datatable-button>
 			<datatable-button v-if="page - 4 >= 1" disabled>...</datatable-button>
@@ -22,7 +22,7 @@
 			<datatable-button v-if="page + 3 <= total_pages" :value="total_pages" @click="setPageNum"></datatable-button>
 			<datatable-button :disabled="page + 1 > total_pages" :value="page + 1" @click="setPageNum" :prevNext="true">
 				<svg class="d-block d-md-none" aria-label="Next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 13" width="6" height="20"><rect width="100%" height="100%" fill="none"/><g class="currentLayer"><path fill="#231815" d="M.5 13l-.4-.1a.5.5 0 0 1 0-.7l4.6-4.6c.6-.6.6-1.5 0-2.1L.1.9C0 .7 0 .4.1.2s.5-.2.7 0l4.6 4.6c.5.5.7 1 .7 1.8s-.3 1.3-.7 1.8L.8 13H.5z"/></g></svg>
-				<span class="d-none d-md-block">Next</div>
+				<span class="d-none d-md-block">Next</span>
 			</datatable-button>
 		</ul>
 		<ul v-else-if="type === 'long'" :class="pagination_class">
