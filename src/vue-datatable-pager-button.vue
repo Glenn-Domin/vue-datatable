@@ -3,7 +3,7 @@
 <template>
 	<li :class="li_classes">
 		<a href="javascript: void(0);" :class="[a_classes, prevNext === true ? 'px-3 px-md-4' : '']" @click="sendClick">
-			<slot v-html="rawHtml">{{ value }}</slot>
+			<slot v-html="value"></slot>
 		</a>
 	</li>
 </template>
