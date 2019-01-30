@@ -24,6 +24,7 @@
     "pagination"
   ],
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "object-path": "^0.11.4",
     "vue": "^2.5.17"
   },
